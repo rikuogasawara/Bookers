@@ -1,0 +1,18 @@
+<body>
+<div class="flash-notifications">
+ <p> <% flash.each do |key, value| %>
+   <%= content_tag(:div, value, class: key) %>
+  <% end %>
+  </p>
+</div>
+<storong>Title:</storong>
+<p><%= @book.title %></p>
+
+<storong>Body:</storong>
+<p><%= @book.body %></p>
+<%= link_to "Edit", edit_book_path(@book.id) %>
+|
+<a href="/books">Back</a>
+
+</body>
+
